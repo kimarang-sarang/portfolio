@@ -1,0 +1,11 @@
+.image_container {
+  cursor: pointer;
+  transition: transform 0.3s; /* Add a smooth transition effect */
+
+  /* Initial position */
+  transform: translateY(0);
+}
+
+.image_container:hover {
+  transform: translateY(-5px); /* Translate 10px up on hover */
+}
