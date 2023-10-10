@@ -34,7 +34,7 @@ export default function Record() {
               vs 다뉴 1승
             </Typography>
             <a
-              href="https://bj.afreecatv.com/candyrang00"
+              href="https://vod.afreecatv.com/player/105005672"
               target="_blank"
               rel="noopener noreferrer"
             >

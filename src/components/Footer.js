@@ -6,6 +6,7 @@ import namuLogo from "../assets/images/namuLogo.svg";
 import tiktokLoo from "../assets/images/tiktokLogo.svg";
 import youtubeLogo from "../assets/images/youtubeLogo.svg";
 import CopyrightIcon from "@mui/icons-material/Copyright";
+// import ygosuLogo from '../assets/images/ygosuLogo.png'
 
 const Footer = () => {
   return (
@@ -178,10 +179,17 @@ const Footer = () => {
             marginBottom: 1,
           }}
         >
+          {/* <a
+
+            href="https://ygosu.com/board/starbbs"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+          <img src={ygosuLogo} width={25} alt='ygosu'/>
+          </a> */}
           <CopyrightIcon />
           <Typography variant="body2">YGOSU SBG</Typography>
         </Box>
-
         {/* <Box sx={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
           <GitHubIcon sx={{ mr: 2, color: "#50586c" }} />
           <Typography variant="body2" sx={{ color: "#50586c", my: 1 }}>

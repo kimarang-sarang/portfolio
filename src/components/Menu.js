@@ -24,7 +24,7 @@ export default function Menu() {
           backgroundColor: "pink",
           borderRadius: "6px",
           padding: 3,
-          maxWidth: "95vw",
+          maxWidth: "90vw",
           maxHeight: "85vh",
           flexWrap: "wrap",
           flexDirection: "column",
