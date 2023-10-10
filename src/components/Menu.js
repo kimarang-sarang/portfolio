@@ -73,7 +73,7 @@ const menu = [
   { name: "퀸카 428개" },
   { name: "1분1초 441개" },
   { name: "DANGER 444개" },
-  { name: "UNFORGIVEN 446개" },
+  { name: "언포기븐 446개" },
   { name: "띵띵땅땅 454개" },
   { name: "킥드배 456개" },
   { name: "티모송 475개" },
