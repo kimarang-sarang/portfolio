@@ -9,12 +9,22 @@ export default function Record() {
     [theme.breakpoints.down("md")]: {
       flexDirection: "column",
       alignItems: "center",
-      // gap: "1rem",
+      gap: "1rem",
     },
   }));
 
   return (
     <Container sx={{ height: "100vh" }}>
+      <div
+        style={{
+          height: "5px",
+          backgroundColor: "#00C7FF",
+          width: "100%",
+          mx: "auto",
+          border: 0,
+          borderRadius: "25px",
+        }}
+      ></div>
       <CustomBox sx={{ display: "flex", justifyContent: "space-around" }}>
         <Box>
           <img src={ybLogo} alt="yb" width="100%" />

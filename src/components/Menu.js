@@ -1,11 +1,70 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Typography, styled } from "@mui/material";
 import React from "react";
 import StarsTwoToneIcon from "@mui/icons-material/StarsTwoTone";
 
 export default function Menu() {
+  const CustomBox = styled(Box)(({ theme }) => ({
+    display: "flex",
+    backgroundColor: "pink",
+    borderRadius: "6px",
+    padding: 3,
+    maxWidth: "90vw",
+    flexDirection: "column",
+    justifyContent: "space-around",
+    [theme.breakpoints.down("fold")]: {
+      flexWrap: "no-wrap",
+    },
+    [theme.breakpoints.up("fold")]: {
+      flexWrap: "wrap",
+      maxHeight: "80vh",
+    },
+  }));
+
+  const CustomTitleBox = styled(Box)(({ theme }) => ({
+    width: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-around",
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "column",
+      alignItems: "center",
+      gap: "2rem",
+    },
+  }));
   return (
-    <Container disableGutters>
-      <Typography
+    <Box sx={{ maxWidth: "1300px", padding: 3, mx: "auto" }}>
+      <CustomTitleBox
+        sx={{
+          width: "100%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-around",
+          mb: 1,
+        }}
+      >
+        <Typography
+          variant="h4"
+          style={{
+            color: "#50586c",
+            textAlign: "center",
+            fontFamily: "monospace",
+            fontWeight: "bolder",
+          }}
+        >
+          MENU
+        </Typography>
+        <div
+          style={{
+            height: "5px",
+            backgroundColor: "#00C7FF",
+            width: "50%",
+            border: 0,
+            borderRadius: "25px",
+          }}
+        ></div>
+      </CustomTitleBox>
+
+      {/* <Typography
         variant="h4"
         style={{
           color: "#50586c",
@@ -17,20 +76,8 @@ export default function Menu() {
         }}
       >
         MENU
-      </Typography>
-      <Container
-        sx={{
-          display: "flex",
-          backgroundColor: "pink",
-          borderRadius: "6px",
-          padding: 3,
-          maxWidth: "90vw",
-          maxHeight: "85vh",
-          flexWrap: "wrap",
-          flexDirection: "column",
-          justifyContent: "space-around",
-        }}
-      >
+      </Typography> */}
+      <CustomBox sx={{}}>
         {menu.map((m) => (
           <Box
             key={m.name}
@@ -40,8 +87,8 @@ export default function Menu() {
             <Typography variant="body2">{m.name}</Typography>
           </Box>
         ))}
-      </Container>
-    </Container>
+      </CustomBox>
+    </Box>
   );
 }
 

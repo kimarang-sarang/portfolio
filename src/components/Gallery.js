@@ -17,7 +17,7 @@ import rang12 from "../assets/images/12.webp";
 import rang13 from "../assets/images/13.jpg";
 import rang14 from "../assets/images/14.jpg";
 import rang15 from "../assets/images/15.jpg";
-import { Container, Typography } from "@mui/material";
+import { Container, Typography, styled } from "@mui/material";
 import classes from "./Gallery.module.css";
 
 // const Label = styled(Paper)(({ theme }) => ({
@@ -31,6 +31,17 @@ import classes from "./Gallery.module.css";
 // }));
 
 export default function Gallery() {
+  const CustomTitleBox = styled(Box)(({ theme }) => ({
+    width: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-around",
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "column",
+      alignItems: "center",
+      gap: "2rem",
+    },
+  }));
   return (
     <Container disableGutters>
       <Box
@@ -45,19 +56,36 @@ export default function Gallery() {
         }}
         id="gallery"
       >
-        <Typography
-          variant="h4"
-          style={{
-            color: "#50586c",
-            fontFamily: "monospace",
-            fontWeight: "bolder",
-            alignSelf: "flex-start",
-            marginTop: 15,
-            marginLeft: 20,
+        <CustomTitleBox
+          sx={{
+            width: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-around",
+            my: 7,
           }}
         >
-          GALLERY
-        </Typography>
+          <Typography
+            variant="h4"
+            style={{
+              color: "#50586c",
+              textAlign: "center",
+              fontFamily: "monospace",
+              fontWeight: "bolder",
+            }}
+          >
+            GALLERY
+          </Typography>
+          <div
+            style={{
+              height: "5px",
+              backgroundColor: "#00C7FF",
+              width: "50%",
+              border: 0,
+              borderRadius: "25px",
+            }}
+          ></div>
+        </CustomTitleBox>
         <Masonry columns={{ xs: 2, sm: 3, md: 5, lg: 7 }} spacing={2}>
           {itemData.map((item, index) => (
             <div key={index} className={classes.image_container}>
